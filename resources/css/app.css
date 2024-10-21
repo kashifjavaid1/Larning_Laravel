@@ -1,0 +1,9 @@
+#h1 {
+    background-color: red; /* Background color */
+    color: white;          /* Text color */
+    padding: 20px;        /* Space around the text */
+    text-align: center;   /* Center align the text */
+    font-family: Arial, sans-serif; /* Font style */
+    border-radius: 8px;   /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
