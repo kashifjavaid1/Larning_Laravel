@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ParacticeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home',[ParacticeController::class,"partice"]);
+Route::get("/about",[ParacticeController::class,"aboutController"]);
 // Route::get('/home',fn()=> view('home'));
 
 
