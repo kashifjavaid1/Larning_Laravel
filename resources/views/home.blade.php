@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Home page</h1>
-   
+  <!-- condations statments -->
     @if($users==='ali')
     <h1>My name is ali</h1>
     @elseif($users==='kashif')
@@ -15,5 +15,15 @@
     @else 
     <h1>Other users</h1>
     @endif
+
+    <!-- for Eeach Loop implement in array methode -->
+    <h1>product's</h1>
+    <ul>
+        @foreach($products as $product)
+        <li>
+            {{$product}}
+        </li>
+        @endforeach
+    </ul>
 </body>
 </html>

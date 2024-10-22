@@ -36,9 +36,11 @@ Route::get("admin/{name}",function($name){
    }
 });
 
-Route::get("/home",function($name){
+// route define and variable define
+Route::get("/home",function(){
+    $products=["cars","bikes","laptops","books","headPhones"];
     $name="kashif";
-    return view("home",["users"=>$name]);
+    return view("home",["users"=>$name, "products"=>$products]);
 });
 
 // Route::get("home",[HomeController::class,"home"]);
