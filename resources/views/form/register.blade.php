@@ -34,17 +34,21 @@
         <div class="input_wrapper">
             <input type="password" placeholder="Enter User Password" name="userPassword">
         </div>
-        <div >
-            <h1>User Skills</h1>
-            <input type="checkbox" name="skill[]" value="PHP" id="php">
-            <label for="php">Php</label>
-            <input type="checkbox" name="skill[]" value="Node" id="node">
-            <label for="node">Node js</label>
-            <input type="checkbox" name="skill[]" value="React" id="react">
-            <label for="react">React js</label>
-        </div>
         <div>
-            <input type="range" name="age" min="18" max="50" id="">
+    <h1>User Skills</h1>
+    <input type="checkbox" name="skill[]" value="PHP" id="php">
+    <label for="php">PHP</label>
+    <br/>
+    <input type="checkbox" name="skill[]" value="Node" id="node">
+    <label for="node">Node.js</label>
+    <br/>
+    <input type="checkbox" name="skill[]" value="React" id="react">
+    <label for="react">React.js</label>
+    <br/>
+</div>
+
+        <div>
+            <input type="range" name="age" min="18" max="100" id="">
         </div>
 
         <div>
