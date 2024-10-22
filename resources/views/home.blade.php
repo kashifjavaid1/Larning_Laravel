@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    @include('subViews.header')
     <h1>Home page</h1>
   <!-- condations statments -->
     @if($users==='ali')
