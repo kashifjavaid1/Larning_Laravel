@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ParacticeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\View;
 /*
 |--------------------------------------------------------------------------
@@ -73,3 +74,4 @@ Route::get("/sigin",function(){
 Route::get("/register",function(){
     return view("form.register");
 });
+Route::post('add-user',[RegisterController::class,'registerUser']);
