@@ -27,25 +27,25 @@ Route::get("/login/{name}",[AdminController::class,"loginUser"]);
 //     return view("home");
 // });
 
-Route::get("admin/{name}",function($name){
-   if (View::exists('admin.login')) {
-    return view("admin.login",["user"=>$name]);
-   }
-   else {
-    echo 'Not found route';
-   }
-});
+// Route::get("admin/{name}",function($name){
+//    if (View::exists('admin.login')) {
+//     return view("admin.login",["user"=>$name]);
+//    }
+//    else {
+//     echo 'Not found route';
+//    }
+// });
 
 // route define and variable define
-Route::get("/home",function(){
-    $products=["cars","bikes","laptops","books","headPhones"];
-    $name="kashif";
-    return view("home",["users"=>$name, "products"=>$products]);
-});
+// Route::get("/home",function(){
+//     $products=["cars","bikes","laptops","books","headPhones"];
+//     $name="kashif";
+//     return view("home",["users"=>$name, "products"=>$products]);
+// });
 
-Route::get("/header",function(){
-    return view("subViews.main");
-});
+// Route::get("/header",function(){
+//     return view("subViews.main");
+// });
 // Route::get("home",[HomeController::class,"home"]);
 // Route::get('/home',[ParacticeController::class,"partice"]);
 // Route::get("/about",[ParacticeController::class,"aboutController"]);
@@ -54,9 +54,9 @@ Route::get("/header",function(){
 
 // route::redirect('/name','/');
 
-Route::get('/about',function(){
-    return view("about");
-});
+// Route::get('/about',function(){
+//     return view("about");
+// });
 
 // Route::get('/name/{name}',function($name){
 //     // echo $name;
@@ -65,3 +65,7 @@ Route::get('/about',function(){
 
 // Route::get("/controller",[UserController::class,'getUserName']);
 // Route::get("/controllers",[UserController::class,'kashifName']);
+
+Route::get("/sigin",function(){
+    return view("admin.sigin");
+});
