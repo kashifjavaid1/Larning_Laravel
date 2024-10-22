@@ -7,8 +7,7 @@
 </head>
 <style>
     input{
-        width: 300px;
-        height: 30px;
+        
         border: 2px solid skyblue;
         color: orange;
         padding-left:10px;
@@ -35,9 +34,31 @@
         <div class="input_wrapper">
             <input type="password" placeholder="Enter User Password" name="userPassword">
         </div>
+        <div >
+            <h1>User Skills</h1>
+            <input type="checkbox" name="skill[]" value="PHP" id="php">
+            <label for="php">Php</label>
+            <input type="checkbox" name="skill[]" value="Node" id="node">
+            <label for="node">Node js</label>
+            <input type="checkbox" name="skill[]" value="React" id="react">
+            <label for="react">React js</label>
+        </div>
+        <div>
+            <input type="range" name="age" min="18" max="50" id="">
+        </div>
+
+        <div>
+            <h1>City</h1>
+            <select name="city" >
+                <option value="lahore">Lahore</option>
+                <option value="faisalabad">Faisalabad</option>
+                <option value="multan">Multan</option>
+            </select>
+        </div>
         <div class="input_wrapper">
             <button>Submit</button>
         </div>
+        
     </form>
 </body>
 </html>
