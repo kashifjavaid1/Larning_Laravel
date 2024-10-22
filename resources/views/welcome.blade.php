@@ -16,5 +16,6 @@
         <br>
         <a href="/name">Users Page</a>
     </div>
+    <x-message-banner title="Front page "/>
 </body>
 </html>

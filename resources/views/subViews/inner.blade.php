@@ -7,7 +7,7 @@
 </head>
 <body>
     <div>
-        <h1>Header Inner File</h1>
+        <h1>{{$page}}</h1>
     </div>
 </body>
 </html>

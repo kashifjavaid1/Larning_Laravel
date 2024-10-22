@@ -43,6 +43,9 @@ Route::get("/home",function(){
     return view("home",["users"=>$name, "products"=>$products]);
 });
 
+Route::get("/header",function(){
+    return view("subViews.main");
+});
 // Route::get("home",[HomeController::class,"home"]);
 // Route::get('/home',[ParacticeController::class,"partice"]);
 // Route::get("/about",[ParacticeController::class,"aboutController"]);
@@ -51,9 +54,9 @@ Route::get("/home",function(){
 
 // route::redirect('/name','/');
 
-// Route::get('/about',function(){
-//     return view("about");
-// });
+Route::get('/about',function(){
+    return view("about");
+});
 
 // Route::get('/name/{name}',function($name){
 //     // echo $name;
