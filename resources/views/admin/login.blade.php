@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>My name is {{$name}}</h1>
+    <div>
+        <h1>Login Page User :{{$user}}</h1>
+    </div>
 </body>
 </html>
