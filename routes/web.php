@@ -69,3 +69,7 @@ Route::get("/login/{name}",[AdminController::class,"loginUser"]);
 Route::get("/sigin",function(){
     return view("admin.sigin");
 });
+
+Route::get("/register",function(){
+    return view("form.register");
+});
