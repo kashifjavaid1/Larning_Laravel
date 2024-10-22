@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ParacticeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\View;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +27,21 @@ Route::get("/login/{name}",[AdminController::class,"loginUser"]);
 //     return view("home");
 // });
 
-Route::get("home",[HomeController::class,"home"]);
+Route::get("admin/{name}",function($name){
+   if (View::exists('admin.login')) {
+    return view("admin.login",["user"=>$name]);
+   }
+   else {
+    echo 'Not found route';
+   }
+});
+
+Route::get("/home",function($name){
+    $name="kashif";
+    return view("home",["users"=>$name]);
+});
+
+// Route::get("home",[HomeController::class,"home"]);
 // Route::get('/home',[ParacticeController::class,"partice"]);
 // Route::get("/about",[ParacticeController::class,"aboutController"]);
 // Route::get('/home',fn()=> view('home'));

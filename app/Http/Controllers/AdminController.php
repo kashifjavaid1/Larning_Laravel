@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     //
-    function loginUser($name){
-        return view("admin.login",["user"=>$name]);
-    }
+    // function loginUser($name){
+    //     return view("admin.login",["user"=>$name]);
+    // }
+
+    
 }
