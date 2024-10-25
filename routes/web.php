@@ -22,11 +22,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/login/{name}",[AdminController::class,"loginUser"]);
+// Route::get("/login/{name}",[AdminController::class,"loginUser"]);
 
-// Route::get("/home",function(){
-//     return view("home");
-// });
+// // Route::get("/home",function(){
+// //     return view("home");
+// // });
 
 // Route::get("admin/{name}",function($name){
 //    if (View::exists('admin.login')) {
@@ -37,35 +37,35 @@ Route::get("/login/{name}",[AdminController::class,"loginUser"]);
 //    }
 // });
 
-// route define and variable define
+// // route define and variable define
 // Route::get("/home",function(){
 //     $products=["cars","bikes","laptops","books","headPhones"];
 //     $name="kashif";
 //     return view("home",["users"=>$name, "products"=>$products]);
 // });
 
-// Route::get("/header",function(){
-//     return view("subViews.main");
-// });
-// Route::get("home",[HomeController::class,"home"]);
-// Route::get('/home',[ParacticeController::class,"partice"]);
-// Route::get("/about",[ParacticeController::class,"aboutController"]);
-// Route::get('/home',fn()=> view('home'));
+Route::get("/header",function(){
+    return view("subViews.main");
+});
+Route::get("home",[HomeController::class,"home"]);
+Route::get('/home',[ParacticeController::class,"partice"]);
+Route::get("/about",[ParacticeController::class,"aboutController"]);
+Route::get('/home',fn()=> view('home'));
 
 
-// route::redirect('/name','/');
+route::redirect('/name','/');
 
-// Route::get('/about',function(){
-//     return view("about");
-// });
+Route::get('/about',function(){
+    return view("about");
+});
 
-// Route::get('/name/{name}',function($name){
-//     // echo $name;
-//     return view('name',['name'=>$name]);
-// });
+Route::get('/name/{name}',function($name){
+    // echo $name;
+    return view('name',['name'=>$name]);
+});
 
-// Route::get("/controller",[UserController::class,'getUserName']);
-// Route::get("/controllers",[UserController::class,'kashifName']);
+Route::get("/controller",[UserController::class,'getUserName']);
+Route::get("/controllers",[UserController::class,'kashifName']);
 
 Route::get("/sigin",function(){
     return view("admin.sigin");
@@ -75,3 +75,13 @@ Route::get("/register",function(){
     return view("form.register");
 });
 Route::post('add-user',[RegisterController::class,'registerUser']);
+
+Route::get("/",function(){
+    return view("welcome");
+});
+// Route::get("/",function(){
+//     return view("welcome");
+// });
+// Route::get("/add-form",function(){
+//     return view("admin.login");
+// });
