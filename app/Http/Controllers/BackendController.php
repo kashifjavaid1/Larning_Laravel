@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 class BackendController extends Controller
 {
     function dataBase(){
-        return DB::select('select * from users');
+        $users=DB::select('select * from users');
+       return view('database.showdatabase',["user"=>$users]);
     }
 }
