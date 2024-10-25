@@ -7,7 +7,9 @@
 </head>
 <body>
     <h1>Show Data in DataBase</h1>
-   {{print_r($user)}}
-    
+    @foreach($user as $users)
+ <h1>{{$users->name}}</h1>
+ <h1>{{$users->email}}</h1>
+    @endforeach
 </body>
 </html>
