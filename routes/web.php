@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\BackendController;
+use App\Http\Controllers\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -92,3 +93,6 @@ Route::get("/",function(){
 //   Backend  Connection 
 
 Route::get('/backend',[BackendController::class,'dataBase']);
+
+// Student Tabel 
+Route::get("/student",[StudentController::class,"getStu"]);
