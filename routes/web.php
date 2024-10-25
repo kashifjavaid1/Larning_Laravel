@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\View;
+use App\Http\Controllers\BackendController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -85,3 +86,9 @@ Route::get("/",function(){
 // Route::get("/add-form",function(){
 //     return view("admin.login");
 // });
+
+
+
+//   Backend  Connection 
+
+Route::get('/backend',[BackendController::class,'dataBase']);
