@@ -9,6 +9,7 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\BackendController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SessionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -100,3 +101,9 @@ Route::get('/backend',[BackendController::class,'dataBase']);
 
 // Student Tabel 
 Route::get("/student",[StudentController::class,"getStu"]);
+
+// Session create
+Route::get("/session",function(){
+    return view("database.user");
+});
+Route::post("login",[SessionController::class,"sessions"]);
