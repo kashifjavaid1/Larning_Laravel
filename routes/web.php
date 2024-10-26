@@ -54,6 +54,12 @@ Route::get('/home',[ParacticeController::class,"partice"]);
 Route::get("/about",[ParacticeController::class,"aboutController"]);
 Route::get('/home',fn()=> view('home'));
 
+// Route::get("/",function(){
+//     return view("welcome");
+// });
+// Route::get("/add-form",function(){
+//     return view("admin.login");
+// });
 
 route::redirect('/name','/');
 
@@ -81,12 +87,6 @@ Route::post('add-user',[RegisterController::class,'registerUser']);
 Route::get("/",function(){
     return view("welcome");
 });
-// Route::get("/",function(){
-//     return view("welcome");
-// });
-// Route::get("/add-form",function(){
-//     return view("admin.login");
-// });
 
 
 
