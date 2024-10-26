@@ -10,7 +10,7 @@ class UserController extends Controller
     //
     function getUser(){
         // Model Base use Query
-        // $result=User::all();
+        $result=User::all();
 //         $result=User::where('phone','12345')->first();
 //    $result=[$result];
 // $result=User::insert([
@@ -19,7 +19,7 @@ class UserController extends Controller
 //     "phone"=>"123456"
 // ]);
 // $result=User::where("name",'user1')->update(["phone"=>"22222"]);
-$result=User::where("id","6")->delete();
+// $result=User::where("id","6")->delete();
 
 
         // Direct database use in controller

@@ -89,6 +89,9 @@ Route::get("/",function(){
 });
 
 
+// any and Match route
+// Route::any("user",[UserController::class,"any"]);
+Route::match(["post","get"],'/user');
 
 //   Backend  Connection 
 Route::get("/users",[UserController::class,"getUser"]);
