@@ -72,8 +72,8 @@ Route::get('/name/{name}',function($name){
     return view('name',['name'=>$name]);
 });
 
-Route::get("/controller",[UserController::class,'getUserName']);
-Route::get("/controllers",[UserController::class,'kashifName']);
+// Route::get("/controller",[UserController::class,'getUserName']);
+// Route::get("/controllers",[UserController::class,'kashifName']);
 
 Route::get("/sigin",function(){
     return view("admin.sigin");
@@ -91,6 +91,7 @@ Route::get("/",function(){
 
 
 //   Backend  Connection 
+Route::get("/users",[UserController::class,"getUser"]);
 
 Route::get('/backend',[BackendController::class,'dataBase']);
 
