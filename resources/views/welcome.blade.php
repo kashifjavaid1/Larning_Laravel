@@ -7,6 +7,8 @@
 </head>
 <body>
     <div>
+        <h1>{{__('welcome.heading')}}</h1>
+        <h1>{{__('welcome.heading2')}}</h1>
         <h1>Routing</h1>
         <a href="/home">Home Page</a>
         <br>

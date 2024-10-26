@@ -8,7 +8,7 @@ class FileController extends Controller
 {
     function file(Request $request){
         $request->validate([
-            'file' => 'required|file|mimes:jpg,png,jpeg|max:2048',
+            'file' => 'required|file|mimes:jpg,png,jpeg,pdf|max:2048',
         ]);
         $originalName = $request->file("file")->getClientOriginalName();
         $path = $request->file("file")->storeAs("public", $originalName);
