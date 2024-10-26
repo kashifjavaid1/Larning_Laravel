@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\View;
 use App\Http\Controllers\BackendController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\FileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -106,4 +107,4 @@ Route::get("/student",[StudentController::class,"getStu"]);
 Route::get("/session",function(){
     return view("database.user");
 });
-Route::post("login",[SessionController::class,"sessions"]);
+Route::post("login",[FileController::class,'file']);
