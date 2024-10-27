@@ -40,9 +40,28 @@ class SessionController extends Controller
             }
         }
 
-        //  edit and populate data
-        function edit($id){
-$student=User::find($id);
-return view("database.edit",["data"=>$student]);          
+    // Edit function to populate form with existing data
+     function edit($id) {
+        $student = User::find($id);
+        if ($student) {
+            return view("database.edit", ["data" => $student]);
+        } else {
+            return redirect()->back()->with('error', 'Student not found');
         }
+    }
+
+    // Update function to save the edited data
+     function update(Request $request, $id) {
+        $student = User::find($id);
+        if ($student) {
+            $student->name = $request->userName;
+            $student->email = $request->userEmail;
+            $student->phone = $request->userPhone;
+            $student->save();
+
+            return redirect("list")->with('success', 'Student updated successfully!');
+        } else {
+            return redirect()->back()->with('error', 'Student not found');
+        }
+    }
 }

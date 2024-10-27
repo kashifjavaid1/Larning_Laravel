@@ -112,5 +112,8 @@ Route::get("/session",function(){
 Route::post("login",[SessionController::class,"sessions"]);
 Route::get("list",[SessionController::class,"list"]);
 Route::get("delete/{id}",[SessionController::class,"delete"]);
-Route::get("edit/{id}",[SessionController::class,"edit"]);
+// Route::get("edit/{id}",[SessionController::class,"edit"]);
+// Route::post("edit/{id}", [SessionController::class, "update"]);
+Route::get("edit/{id}", [SessionController::class, "edit"]);
+Route::post("edit/{id}", [SessionController::class, "update"]); 
 // Route::post("login",[FileController::class,'file']);
