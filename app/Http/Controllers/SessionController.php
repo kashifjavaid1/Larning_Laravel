@@ -74,4 +74,16 @@ class SessionController extends Controller
       return view("database.showuser",["user"=>$studentData,"search"=>$request->search]);
 
     }
+
+    // Delete multiple
+    function deleteMultipleUsers(Request $request){
+     $ids=$request->ids;
+        $isDeleted=User::destroy($ids);
+        if ($isDeleted) {
+            return redirect("list");
+        }else{
+            return "NO deleted";
+        }
+    }
+
 }

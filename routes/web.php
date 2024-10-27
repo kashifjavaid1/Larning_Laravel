@@ -115,5 +115,6 @@ Route::get("delete/{id}",[SessionController::class,"delete"]);
 Route::get("edit/{id}", [SessionController::class, "edit"]);
 Route::post("edit/{id}", [SessionController::class, "update"]); 
 Route::get("search", [SessionController::class,"search"]); 
+Route::post('delete-multiple', [SessionController::class, 'deleteMultipleUsers']);
 
 // Route::post("login",[FileController::class,'file']);
