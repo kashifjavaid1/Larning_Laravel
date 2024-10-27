@@ -8,6 +8,11 @@ use App\Models\User;
 class SessionController extends Controller
 {
    function sessions(Request $request) {
+    $request->validate([
+        'userName' => 'required',
+        'userEmail' => 'required|email|unique:users,email', 
+        'userPhone' => 'required'
+    ]);
    $student= new User();
    $student->name=$request->userName;
    $student->email=$request->userEmail;
@@ -33,5 +38,11 @@ class SessionController extends Controller
             }else{
                 return "NO deleted";
             }
+        }
+
+        //  edit and populate data
+        function edit($id){
+$student=User::find($id);
+return view("database.edit",["data"=>$student]);          
         }
 }
