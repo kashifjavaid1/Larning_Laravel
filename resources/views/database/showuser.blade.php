@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .w-5.h-5{
+        width: 2px;
+    }
+</style>
 <body>
     <h1><a href="{{'session'}}">Add User</a></h1>
 
@@ -33,5 +38,7 @@
         </tr>
         @endforeach
     </table>
+
+    {{$user->links()}}
 </body>
 </html>

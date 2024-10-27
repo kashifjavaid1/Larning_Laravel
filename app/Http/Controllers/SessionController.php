@@ -27,7 +27,10 @@ class SessionController extends Controller
 
          // get User funcations
          function list(){
-            $studentData=User::all();
+            // all data fetch
+            // $studentData=User::all();
+            // pegination
+            $studentData=User::paginate(5);
             return view("database.showuser",["user"=>$studentData]);
          }
         //  delete user funcation
