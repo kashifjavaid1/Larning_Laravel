@@ -7,7 +7,13 @@
 </head>
 <body>
     <h1><a href="{{'session'}}">Add User</a></h1>
+
     <h1>List</h1>
+    <form action="search" method="get">
+        <input type="text" placeholder="Search" name="search" value={{@$search}}>
+        <button>Search</button>
+    </form>
+<br><br>
     <table border="1">
         <tr>
             <th>Name</th>

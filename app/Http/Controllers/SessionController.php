@@ -64,4 +64,11 @@ class SessionController extends Controller
             return redirect()->back()->with('error', 'Student not found');
         }
     }
+
+    // Search funcation 
+    function search(Request $request){
+      $studentData=User::where("name",'like',"%$request->search%")->get();
+      return view("database.showuser",["user"=>$studentData,"search"=>$request->search]);
+
+    }
 }
