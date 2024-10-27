@@ -8,18 +8,30 @@ use App\Models\User;
 class SessionController extends Controller
 {
    function sessions(Request $request) {
-       $request->validate([
-           'userName' => 'required|string|max:255',
-           'userEmail' => 'required|string|email|max:255|unique:users,email', 
-       ]);
-
-       
-       $user = User::create([
-           'name' => $request->input('userName'),
-           'email' => $request->input('userEmail'),
-           "phone"=>$request->input("userPhone")
-       ]);
-       $request->session()->flash("message","user has been successful");
-    //    return response()->json(['message' => 'User created successfully!', 'user' => $user], 201);
+   $student= new User();
+   $student->name=$request->userName;
+   $student->email=$request->userEmail;
+   $student->phone=$request->userPhone;
+   $student->save();
+   if ($student) {
+    echo redirect("list");
+   }else {
+    echo "no student add";
    }
+   }
+
+         // get User funcations
+         function list(){
+            $studentData=User::all();
+            return view("database.showuser",["user"=>$studentData]);
+         }
+        //  delete user funcation
+        function delete($id){
+            $isDeleted=User::destroy($id);
+            if ($isDeleted) {
+                return redirect("list");
+            }else{
+                return "NO deleted";
+            }
+        }
 }

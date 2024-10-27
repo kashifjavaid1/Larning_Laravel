@@ -107,4 +107,9 @@ Route::get("/student",[StudentController::class,"getStu"]);
 Route::get("/session",function(){
     return view("database.user");
 });
-Route::post("login",[FileController::class,'file']);
+
+//  Crud implement
+Route::post("login",[SessionController::class,"sessions"]);
+Route::get("list",[SessionController::class,"list"]);
+Route::get("delete/{id}",[SessionController::class,"delete"]);
+// Route::post("login",[FileController::class,'file']);
