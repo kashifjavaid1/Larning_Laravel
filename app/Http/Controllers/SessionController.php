@@ -28,7 +28,7 @@ class SessionController extends Controller
          // get User funcations
          function list(){
             // all data fetch
-            // $studentData=User::all();
+        //   return  $studentData=User::all();
             // pegination
             $studentData=User::paginate(5);
             return view("database.showuser",["user"=>$studentData]);

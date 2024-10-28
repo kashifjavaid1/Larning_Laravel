@@ -9,5 +9,12 @@ class User extends Model
 {
     use HasFactory;
     public $timestamps=false;
+    // accessors
+    function getPhoneAttribute($val)
+    {
+        return " +92 ". $val;
+    };
+
+    
     // protected $fillable = ['name', 'email', 'phone'];
 }
