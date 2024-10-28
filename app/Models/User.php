@@ -13,8 +13,15 @@ class User extends Model
     function getPhoneAttribute($val)
     {
         return " +92 ". $val;
-    };
+    }
 
-    
-    // protected $fillable = ['name', 'email', 'phone'];
+    // mutators
+    function setNameAttribute($val){
+        $this->attributes['name']=ucfirst($val);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'seller_id');
+    }
 }

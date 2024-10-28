@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\View;
 use App\Http\Controllers\BackendController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\SellorController;
 use App\Http\Controllers\FileController;
 /*
 |--------------------------------------------------------------------------
@@ -118,3 +119,6 @@ Route::get("search", [SessionController::class,"search"]);
 Route::post('delete-multiple', [SessionController::class, 'deleteMultipleUsers']);
 
 // Route::post("login",[FileController::class,'file']);
+
+// Realtionships
+Route::get("products", [SellorController::class,"product"]); 
