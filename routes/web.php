@@ -12,6 +12,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\SellorController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -122,3 +123,4 @@ Route::post('delete-multiple', [SessionController::class, 'deleteMultipleUsers']
 
 // Realtionships
 Route::get("products", [SellorController::class,"product"]); 
+Route::get("email",[MailController::class,"sendEmail"]);
