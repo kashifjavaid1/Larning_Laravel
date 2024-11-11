@@ -24,7 +24,6 @@ class SessionController extends Controller
     echo "no student add";
    }
    }
-
          // get User funcations
          function list(){
             // all data fetch
